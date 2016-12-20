@@ -34,7 +34,7 @@ public class PracticaService {
                 data[i][0] = checkIfNull(persona.getName().getFirst());
                 data[i][1] = checkIfNull(persona.getName().getLast());
                 data[i][2] = checkIfNull(persona.getEmail());
-                data[i][3] = checkIfNull(persona.getTags());
+                data[i][3] = checkIfNull(persona.getTag());
                 data[i][4] = checkIfNull(persona.getPartnersNames());
                 i++;
             }

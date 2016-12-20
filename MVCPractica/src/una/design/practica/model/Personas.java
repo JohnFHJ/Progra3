@@ -6,6 +6,7 @@
 package una.design.practica.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import java.util.Arrays;
 
 /**
  *
@@ -71,11 +72,19 @@ public class Personas {
         }
         return names;
     }
+    
+    public String getTag(){
+            String tag = "";
+        for (String tagsAux : this.tags) {
+            tag = Arrays.toString(this.tags);
+        }
+        return tag;
+    }
 
     @Override
     public String toString() {
 
-        return "Personas{" + "name=" + name + ", tags=" + tags + ", email=" + email + ", friend=" + getPartnersNames() + '}';
+        return "Personas{" + "name=" + name + ", tags=" + tags + ", email=" + email + ", friend=" + friends + '}';
     }
 
 }

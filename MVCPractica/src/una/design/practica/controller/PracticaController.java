@@ -9,6 +9,8 @@ import com.fasterxml.jackson.core.JsonGenerationException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.IOException;
 import java.security.Provider.Service;
 import javax.swing.JOptionPane;
@@ -21,7 +23,7 @@ import una.design.practica.service.PracticaService;
  *
  * @author Estudiante
  */
-public class PracticaController implements ActionListener {
+public class PracticaController implements ActionListener, KeyListener {
 
     private JTextField searchTermTextField = new JTextField(26);
     private DefaultTableModel tableModel;
@@ -70,6 +72,23 @@ public class PracticaController implements ActionListener {
                     JOptionPane.ERROR_MESSAGE);
             tableModel.setDataVector(personas, Constants.TABLE_HEADER);
         }
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+         
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+      
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
