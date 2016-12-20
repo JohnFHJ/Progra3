@@ -7,14 +7,17 @@ package una.design.practica;
 
 /**
  *
- * @author Estudiante
+ * @author John Herrera
  */
 public class Constants {
 
+    /**
+     *Objeto estatico 
+     */
     public static final String FILENAME = "data.json";
 
     /**
-     *
+     *objeto estatico, el cual crea los "Titulos de la Tabla"
      */
     public static final Object[] TABLE_HEADER = {"Name", "Apellido", "Email", "Tags", "Friends"};
 }

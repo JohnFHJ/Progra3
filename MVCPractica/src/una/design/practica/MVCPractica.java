@@ -13,7 +13,7 @@ import una.design.practica.view.PracticaView;
 
 /**
  *
- * @author Estudiante
+ * @author John Herrera
  */
 public class MVCPractica {
 
@@ -39,6 +39,10 @@ public class MVCPractica {
         });
     }
 
+    /**
+     *
+     * @throws Exception
+     */
     public static void createAndShowGUI() throws Exception {
         PracticaView studentListView = new PracticaView();
     }

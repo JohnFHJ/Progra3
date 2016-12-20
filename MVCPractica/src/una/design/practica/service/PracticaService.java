@@ -15,13 +15,23 @@ import una.design.practica.model.Personas;
 
 /**
  *
- * @author Estudiante
+ * @author John Herrera
  */
 public class PracticaService {
 
+    /**
+     *Contructor Vacio
+     */
     public PracticaService() {
     }
 
+    /**
+     *
+     * @return retorna una matriz con los datos recuperados y colocados en su posicion en el table
+     * @throws JsonGenerationException captura de Errores
+     * @throws JsonMappingException 
+     * @throws IOException
+     */
     public Object[][] loadPersonasObjWrapper() throws JsonGenerationException,
             JsonMappingException, IOException {
         Personas[] personas = loadStudentsFromFile();

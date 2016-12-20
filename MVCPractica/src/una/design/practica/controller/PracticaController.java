@@ -12,7 +12,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.io.IOException;
-import java.security.Provider.Service;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -21,7 +20,7 @@ import una.design.practica.service.PracticaService;
 
 /**
  *
- * @author Estudiante
+ * @author John Herrera
  */
 public class PracticaController implements ActionListener, KeyListener {
 
@@ -30,6 +29,14 @@ public class PracticaController implements ActionListener, KeyListener {
     private PracticaService personaService;
     private Object[][] personas;
 
+    /**
+     *
+     * @param searchTermTextField el parametro searchTermTextField define el ingreso de datos en pantalla
+     * @param tableModel el parametro tableModel define una tabla la cual contendra los datos recuperados del Json
+     * @throws JsonGenerationException Captura de Errores
+     * @throws JsonMappingException Captura de Errores
+     * @throws IOException Captura de Errores
+     */
     public PracticaController(JTextField searchTermTextField,
             DefaultTableModel tableModel) throws JsonGenerationException,
             JsonMappingException, IOException {

@@ -23,7 +23,7 @@ import una.design.practica.controller.PracticaController;
 
 /**
  *
- * @author Estudiante
+ * @author John Herrera
  */
 public class PracticaView extends JFrame {
 
