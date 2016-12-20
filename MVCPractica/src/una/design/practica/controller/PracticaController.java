@@ -23,7 +23,7 @@ import una.design.practica.service.PracticaService;
  *
  * @author Estudiante
  */
-public class PracticaController implements ActionListener {
+public class PracticaController implements ActionListener, KeyListener {
 
     private JTextField searchTermTextField = new JTextField(26);
     private DefaultTableModel tableModel;
@@ -34,14 +34,17 @@ public class PracticaController implements ActionListener {
             DefaultTableModel tableModel) throws JsonGenerationException,
             JsonMappingException, IOException {
         super();
+
         personaService = new PracticaService();
         personas = personaService.loadPersonasObjWrapper();
 
         this.searchTermTextField = searchTermTextField;
+
         this.tableModel = tableModel;
 
         // Load the table with the list of students
         tableModel.setDataVector(personas, Constants.TABLE_HEADER);
+        this.searchTermTextField.addKeyListener(this);
     }
 
     @Override
@@ -74,5 +77,22 @@ public class PracticaController implements ActionListener {
         }
     }
 
+    @Override
+    public void keyTyped(KeyEvent e) {
+            String key = searchTermTextField.getText();
+            updateTableSearchTerms(key);
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+
+    }
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+
+//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }
