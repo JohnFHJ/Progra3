@@ -23,7 +23,7 @@ import una.design.practica.service.PracticaService;
  *
  * @author Estudiante
  */
-public class PracticaController implements ActionListener, KeyListener {
+public class PracticaController implements ActionListener {
 
     private JTextField searchTermTextField = new JTextField(26);
     private DefaultTableModel tableModel;
@@ -54,12 +54,12 @@ public class PracticaController implements ActionListener, KeyListener {
 
     private void updateTableSearchTerms(String searchTerm) {
         if (searchTerm != null && !"".equals(searchTerm)
-                && personas != null && personas.length > 1) {
+                && personas != null && personas.length > 0) {
             Object[][] newData = new Object[personas.length][];
             int idx = 0;
             for (Object[] obj : personas) {
                 String fullText = obj[0].toString() + obj[1].toString()
-                        + obj[2].toString() + obj[3].toString();
+                        + obj[2].toString() + obj[3].toString() + obj[4].toString();
 
                 if (fullText.contains(searchTerm.trim())) {
                     newData[idx++] = obj;
@@ -74,21 +74,5 @@ public class PracticaController implements ActionListener, KeyListener {
         }
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-         
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-      
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 
 }
