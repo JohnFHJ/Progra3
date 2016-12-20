@@ -20,7 +20,8 @@ public class PracticaService {
 
     public PracticaService() {
     }
-        public Object[][] loadPersonasObjWrapper() throws JsonGenerationException,
+
+    public Object[][] loadPersonasObjWrapper() throws JsonGenerationException,
             JsonMappingException, IOException {
         Personas[] personas = loadStudentsFromFile();
         Object[][] data = null;
@@ -29,10 +30,11 @@ public class PracticaService {
             data = new Object[personas.length][4]; // filas y columnas
             int i = 0;
             for (Personas persona : personas) {
-                data[i][0] = checkIfNull(persona.getName());
-                data[i][1] = checkIfNull(persona.getEmail());
-                data[i][2] = checkIfNull(persona.getTags());
-                data[i][3] = checkIfNull(persona.getFriend());
+                data[i][0] = checkIfNull(persona.getName().getFirst());
+                data[i][1] = checkIfNull(persona.getName().getLast());
+                data[i][2] = checkIfNull(persona.getEmail());
+                data[i][3] = checkIfNull(persona.getTags());
+                data[i][4] = checkIfNull(persona.getFriend());
                 i++;
             }
         }
