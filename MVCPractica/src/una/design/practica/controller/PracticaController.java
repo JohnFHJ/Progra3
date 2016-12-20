@@ -21,14 +21,14 @@ import una.design.practica.service.PracticaService;
  *
  * @author Estudiante
  */
-public class PracticaController implements ActionListener{
+public class PracticaController implements ActionListener {
 
     private JTextField searchTermTextField = new JTextField(26);
     private DefaultTableModel tableModel;
     private PracticaService personaService;
     private Object[][] personas;
-    
-        public PracticaController(JTextField searchTermTextField,
+
+    public PracticaController(JTextField searchTermTextField,
             DefaultTableModel tableModel) throws JsonGenerationException,
             JsonMappingException, IOException {
         super();
@@ -44,13 +44,13 @@ public class PracticaController implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-String searchTerm = searchTermTextField.getText();
+        String searchTerm = searchTermTextField.getText();
 
         //Method to search items
-        updateTableSearchTerms(searchTerm);    }
-    
-        
-     private void updateTableSearchTerms(String searchTerm) {
+        updateTableSearchTerms(searchTerm);
+    }
+
+    private void updateTableSearchTerms(String searchTerm) {
         if (searchTerm != null && !"".equals(searchTerm)
                 && personas != null && personas.length > 1) {
             Object[][] newData = new Object[personas.length][];
@@ -70,6 +70,6 @@ String searchTerm = searchTermTextField.getText();
                     JOptionPane.ERROR_MESSAGE);
             tableModel.setDataVector(personas, Constants.TABLE_HEADER);
         }
-    }   
-        
+    }
+
 }

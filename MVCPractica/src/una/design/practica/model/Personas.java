@@ -71,8 +71,6 @@ public class Personas {
         }
         return names;
     }
-    
- 
 
     @Override
     public String toString() {
