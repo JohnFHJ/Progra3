@@ -61,13 +61,16 @@ public class Personas {
     }
 
     public void setFriend(Friends[] friend) {
+        String friends ="";
+        for(Friends friend : this.friends ){
+            friends = friends + friend.getName() + ""
+    }
         this.friend = friend;
     }
 
-   
-
     @Override
     public String toString() {
+
         return "Personas{" + "name=" + name + ", tags=" + tags + ", email=" + email + ", friend=" + friend + '}';
     }
 

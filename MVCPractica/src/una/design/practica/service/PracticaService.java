@@ -6,6 +6,7 @@
 package una.design.practica.service;
 
 import com.fasterxml.jackson.core.JsonGenerationException;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
@@ -50,6 +51,7 @@ public class PracticaService {
         final String FILENAME = "data.json";
 
         ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         // Convert JSON string from file to Object
         personas = mapper.readValue(new File(FILENAME), Personas[].class);
 
