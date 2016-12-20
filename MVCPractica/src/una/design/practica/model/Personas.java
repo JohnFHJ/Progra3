@@ -61,10 +61,6 @@ public class Personas {
     }
 
     public void setFriend(Friends[] friend) {
-        String friends ="";
-        for(Friends friend : this.friends ){
-            friends = friends + friend.getName() + ""
-    }
         this.friend = friend;
     }
 
