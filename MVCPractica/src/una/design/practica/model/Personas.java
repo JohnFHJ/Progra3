@@ -20,7 +20,7 @@ public class Personas {
     @JsonProperty("email")
     String email;
     @JsonProperty("friends")
-    Friends[] friend;
+    Friends[] friends;
 
     public Personas() {
     }
@@ -29,7 +29,7 @@ public class Personas {
         this.name = name;
         this.tags = tags;
         this.email = email;
-        this.friend = friend;
+        this.friends = friend;
     }
 
     public Name getName() {
@@ -57,17 +57,27 @@ public class Personas {
     }
 
     public Friends[] getFriend() {
-        return friend;
+        return friends;
     }
 
     public void setFriend(Friends[] friend) {
-        this.friend = friend;
+        this.friends = friend;
     }
+
+    public String getPartnersNames() {
+        String names = "";
+        for (Friends friend : this.friends) {
+            names = names + friend.getName() + "-";
+        }
+        return names;
+    }
+    
+ 
 
     @Override
     public String toString() {
 
-        return "Personas{" + "name=" + name + ", tags=" + tags + ", email=" + email + ", friend=" + friend + '}';
+        return "Personas{" + "name=" + name + ", tags=" + tags + ", email=" + email + ", friend=" + getPartnersNames() + '}';
     }
 
 }

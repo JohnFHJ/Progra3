@@ -28,14 +28,14 @@ public class PracticaService {
         Object[][] data = null;
 
         if (personas != null && personas.length > 0) {
-            data = new Object[personas.length][4]; // filas y columnas
+            data = new Object[personas.length][5]; // filas y columnas
             int i = 0;
             for (Personas persona : personas) {
                 data[i][0] = checkIfNull(persona.getName().getFirst());
                 data[i][1] = checkIfNull(persona.getName().getLast());
                 data[i][2] = checkIfNull(persona.getEmail());
                 data[i][3] = checkIfNull(persona.getTags());
-                data[i][4] = checkIfNull(persona.getFriend());
+                data[i][4] = checkIfNull(persona.getPartnersNames());
                 i++;
             }
         }
