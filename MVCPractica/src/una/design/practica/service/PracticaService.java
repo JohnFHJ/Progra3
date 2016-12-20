@@ -38,7 +38,7 @@ public class PracticaService {
                 data[i][4] = checkIfNull(persona.getPartnersNames());
                 i++;
             }
-        }
+        } 
 
         return data;
     }
