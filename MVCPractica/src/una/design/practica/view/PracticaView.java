@@ -25,7 +25,8 @@ import una.design.practica.controller.PracticaController;
  *
  * @author Estudiante
  */
-public class PracticaView extends JFrame{
+public class PracticaView extends JFrame {
+
     JTextField searchTermTextField = new JTextField(26);
     JButton filterButton = new JButton("Filter");
     JTable table = new JTable();
@@ -40,9 +41,9 @@ public class PracticaView extends JFrame{
      */
     public PracticaView() throws JsonGenerationException,
             JsonMappingException, IOException {
-        
+
         super("List of Students (MVC Demo)");
-        
+
         searchTermTextField.setName("txtSearch");
         filterButton.setName("btnFilter");
 
@@ -59,13 +60,13 @@ public class PracticaView extends JFrame{
         ctrlPane.setName("ctrlPanel");
         ctrlPane.add(searchTermTextField);
         ctrlPane.add(filterButton);
-        
+
         JScrollPane tableScrollPane = new JScrollPane(table);
         tableScrollPane.setName("scrollTablePaneStudent");
         tableScrollPane.setPreferredSize(new Dimension(700, 182));
         tableScrollPane.setBorder(BorderFactory.createTitledBorder(BorderFactory.createEtchedBorder(), "Market Movers",
                 TitledBorder.CENTER, TitledBorder.TOP));
-        
+
         JSplitPane splitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, ctrlPane, tableScrollPane);
         splitPane.setName("splitPane");
         splitPane.setDividerLocation(35);
@@ -75,7 +76,7 @@ public class PracticaView extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         add(splitPane);
         pack();
-        
+
         setLocationRelativeTo(null);
         setVisible(true);
     }

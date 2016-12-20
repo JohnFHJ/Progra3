@@ -44,9 +44,7 @@ public class Friends {
 
     @Override
     public String toString() {
-       
-        
-        
+
         return "Friends{" + "name=" + name + ", id=" + id + '}';
     }
 

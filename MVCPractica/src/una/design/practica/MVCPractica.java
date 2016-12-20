@@ -21,7 +21,7 @@ public class MVCPractica {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-             SwingUtilities.invokeLater(new Runnable() {
+        SwingUtilities.invokeLater(new Runnable() {
             public void run() {
                 try {
                     createAndShowGUI();
@@ -38,8 +38,9 @@ public class MVCPractica {
             }
         });
     }
-        public static void createAndShowGUI() throws Exception {
+
+    public static void createAndShowGUI() throws Exception {
         PracticaView studentListView = new PracticaView();
     }
-    
+
 }

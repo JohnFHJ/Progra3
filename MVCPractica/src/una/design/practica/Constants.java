@@ -10,7 +10,8 @@ package una.design.practica;
  * @author Estudiante
  */
 public class Constants {
-        public static final String FILENAME = "data.json";
+
+    public static final String FILENAME = "data.json";
 
     /**
      *

@@ -79,20 +79,20 @@ public class PracticaController implements ActionListener, KeyListener {
 
     @Override
     public void keyTyped(KeyEvent e) {
-            String key = searchTermTextField.getText();
+        String key = searchTermTextField.getText();
+        if (!"".equals(key)) {
             updateTableSearchTerms(key);
+        }
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
 
     }
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 
     @Override
     public void keyReleased(KeyEvent e) {
 
-//throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

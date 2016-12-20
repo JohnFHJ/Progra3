@@ -72,9 +72,9 @@ public class Personas {
         }
         return names;
     }
-    
-    public String getTag(){
-            String tag = "";
+
+    public String getTag() {
+        String tag = "";
         for (String tagsAux : this.tags) {
             tag = Arrays.toString(this.tags);
         }
